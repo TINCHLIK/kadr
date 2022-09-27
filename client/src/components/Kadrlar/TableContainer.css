@@ -1,0 +1,33 @@
+.pagination{
+    display: flex;
+    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
+}
+button{
+    border: 1px solid green;
+    border-radius: 5px !important;
+    padding: 5px;
+    margin: 5px !important;
+    background-color: rgb(45, 204, 45);
+}
+button:disabled{
+    background-color: rgb(229, 243, 229);
+}
+input, select{
+    margin: 5px !important;
+    width:75px; 
+    border:1px solid gray; 
+    border-radius:5px; 
+    padding:5px;
+    border: 1px solid green;
+}
+.settings{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(211, 201, 201);
+    /* overflow-x: none; */
+}
+.settings div label {
+    width: 200px;
+}

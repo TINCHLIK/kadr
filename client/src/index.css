@@ -1,0 +1,9 @@
+/* *, body, html{
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
