@@ -4,30 +4,13 @@ const uuid = require('uuid')
 const path = require('path')
 
 class KadrlarController {
-    // async create(req,res){
-    //     const {firstName,lastName,fatherName,birthYear,birthMonth,birthDay,birthCountry,birthProvince,birthCityDistrict,gender,citizenship,married,partisanship,levelKnowledge,seniority,salary,email,telegram,phone} = req.body
-    //     try {
-    //         // const kadr = await Kadr.create({firstName,lastName,fatherName,birthYear,birthMonth,birthDay,birthCountry,birthProvince,birthCityDistrict,gender,citizenship,married,partisanship,levelKnowledge,seniority,salary,email,telegram,phone} )
-    //         const kadr = await Kadr.create( req.body )
-    //         return res.json(kadr)
-    //         console.log("ishladiyu");
-    //     } catch (error) {
-    //         return res.json(error)
-    //     }
-    // }
     async create(req,res){
         const {firstName,lastName,fatherName,birthYear,birthMonth,birthDay,birthCountry,birthProvince,birthCityDistrict,gender,citizenship,married,partisanship,levelKnowledge,seniority,salary,email,telegram,phone} = req.body
         try {
-            // const {photo} = req.files
-            let fileName = uuid.v4() + ".jpg"
-            // photo.mv(path.resolve(__dirname, '..', 'static', fileName))
             const kadr = await Kadr.create({firstName,lastName,fatherName,birthYear,birthMonth,birthDay,birthCountry,birthProvince,birthCityDistrict,gender,citizenship,married,partisanship,levelKnowledge,seniority,salary,email,telegram,phone} )
             return res.json(kadr)
-            // return res.json(photo)
         } catch (error) {
             return res.json(error)
-            // return next(ApiError.badRequest("Formani to'g'ri to'ldiring"))
-            // res.json({message:"ISHLAMADI XATO"})
         }
     }
 
